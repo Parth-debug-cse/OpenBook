@@ -136,4 +136,4 @@ Key settings in `backend/config.py`. Override with environment variables:
 - `n_threads=4` — matches physical cores; hyper-threading adds little for LLM inference.
 - `n_ctx=2048` — limits context memory; increase only with headroom.
 - Flash Attention **disabled** — no benefit on CPU.
-- Embeddings via `fastembed` (ONNX) — no server, no Ollama, runs in-process.
+- Embeddings via `fastembed` (ONNX) — no server, runs in-process.

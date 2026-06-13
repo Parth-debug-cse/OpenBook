@@ -93,7 +93,7 @@ def synthesise(text: str, voice: str = TTS_VOICE, speed: float = TTS_SPEED) -> b
     _cleanup_old_cache()
 
     kokoro  = _get_kokoro()
-    samples, sr = kokoro.create(text, voice=voice, speed=speed, lang="en-us")
+    samples, sr = kokoro.create(text, voice=voice, speed=speed)
 
     sf.write(str(cache_file), samples, sr, format="WAV", subtype="PCM_16")
     return cache_file.read_bytes()
